@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
         if (!err) { res.send(docs); }
         else { console.log('Error :' + JSON.stringify(err, undefined, 2)); }
     });
-    
 });
 
 //INSERTAR UNA PERSONA
