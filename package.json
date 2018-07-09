@@ -1,27 +1,19 @@
 {
-  "name": "gestionusuarios",
+  "name": "facturacion",
   "version": "1.0.0",
-  "description": "Modulo de personas",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js"
+    "dev": "nodemon src/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jamesvinicio1/GestionUsuarios.git"
-  },
-  "keywords": [
-    "personas"
-  ],
-  "author": "Jaime Vinicio Carrillo Gallardo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jamesvinicio1/GestionUsuarios/issues"
-  },
-  "homepage": "https://github.com/jamesvinicio1/GestionUsuarios#readme",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
-    "mongoose": "^5.2.0"
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.5"
   }
 }
