@@ -6,6 +6,7 @@ const Persona = require('../models/personaModel');
 router.get('/', async (req, res) =>{
     const personas = await Persona.find();
     res.json(personas);
+    res.sendStatus();
 });
 
 router.get('/:CEDULA', (req, res) => {
@@ -32,12 +33,13 @@ router.post('/', async (req, res) => {
     });
 });
 
-router.delete('/', async (req, res) => {
-    console.log(req.query);
-   await Cliente.findByIdAndRemove(req.query);
-   res.json({
-    status:'Persona eliminada'
-   });
+router.delete('/:CEDULA', async (req, res) => {
+    await Persona.remove({"CEDULA":req.params.CEDULA},function(err){
+        res.json({
+            status: 'Persona Eliminada'
+        });
+    });
 });
+
 
 module.exports = router;
