@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 
 const Persona = new Schema({
     CEDULA:String,
+    ID:String,
     NOMBRE:String,
     APELLIDO:String,
     DIRECCION:String,

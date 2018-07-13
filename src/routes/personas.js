@@ -16,6 +16,13 @@ router.get('/:CEDULA', (req, res) => {
     });
 });
 
+router.get('/:ID', (req, res) => {
+    Persona.find({"ID": req.params.ID }, (err, doc) => {
+        if (!err) { res.send(doc); }
+        else { console.log('Error :' + JSON.stringify(err, undefined, 2)); }
+    });
+});
+
 router.put('/', async (req, res) => {
     const persona = new Persona(req.body);
     await persona.save();
