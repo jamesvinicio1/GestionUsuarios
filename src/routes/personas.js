@@ -84,7 +84,7 @@ router.get('/perfil/:perfil',function(req,res){
     
     var obj = JSON.stringify(jsonPersonas);
 
-    res.json(obj);
+    res.json(obj); 
 
     req.on('error', function(e) {
         console.log('ERROR: ' + e.message);
